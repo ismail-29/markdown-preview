@@ -1,28 +1,29 @@
-import React, { useState } from 'react';
-import {marked} from 'marked';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import React, { useState } from "react";
+import { marked } from "marked";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
 function MarkdownPreviewer() {
-  const [text, setText] = useState(`# H1
-    ## H2
-    [title](https://www.example.com)
-    \`code\`
-    \`\`\`
+  const [text, setText] = useState(`
+  # H1
+  ## H2
+  [title](https://www.example.com)
+  \`code\`
+  \`\`\`
 {
   "firstName": "John",
   "lastName": "Smith",
   "age": 25
 }
-\`\`\`
-- First item
-- Second item
-- Third item
+  \`\`\`
+  - First item
+  - Second item
+  - Third item
 
-> blockquote
+  > blockquote
 
-**bold text**
-![alt text](image.jpg)
+  **bold text**
+  ![alt text](image.jpg)
   `);
 
   const handleInputChange = (event) => {
